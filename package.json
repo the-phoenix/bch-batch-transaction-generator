@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "BCH batch transaction generator - to testnet",
   "engines": {
-    "node": ">= 10.13 <11"
+    "node": ">= 11.1 <12"
   },
   "devDependencies": {
     "@types/jest": "^23.3.12",
@@ -29,6 +29,9 @@
   "author": "the-phoenix <github.com/the-phoenix>",
   "license": "Apache-2.0",
   "dependencies": {
+    "bitbox-sdk": "^2.3.0",
+    "nconf": "^0.10.0",
+    "rxjs": "^6.3.3",
     "tslib": "~1.9.3"
   }
 }

@@ -27,3 +27,9 @@ build/
 
 # Misc
 .DS_Store
+
+# Ignore package-lock.json to force use yarn
+package-lock.json
+
+# Ignore wallet
+wallets/*.json
