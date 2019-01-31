@@ -8,6 +8,7 @@
   "devDependencies": {
     "@types/jest": "^23.3.12",
     "@types/node": "^10.12.18",
+    "@types/uuid": "^3.4.4",
     "jest": "~23.6.0",
     "prettier": "1.15.3",
     "rimraf": "^2.6.3",
@@ -32,6 +33,8 @@
     "bitbox-sdk": "^2.3.0",
     "nconf": "^0.10.0",
     "rxjs": "^6.3.3",
-    "tslib": "~1.9.3"
+    "tslib": "~1.9.3",
+    "uid": "^0.0.2",
+    "uuid": "^3.3.2"
   }
 }
