@@ -12,9 +12,9 @@ npm install
 node build/src/start.js
 ```
 
-## Available parameter
+## Available arguments
 
-+ `receiveAddr` - receive cash address. default value: `bchtest:qqahjy0x9zus2qypf0tfd7mykpvxqtc6rqfft0sgjy`
++ `receiveAddr` - receive cash address. default: `bchtest:qqahjy0x9zus2qypf0tfd7mykpvxqtc6rqfft0sgjy`
 
 You can set parameter with env var or command line arguments. 
 e.g. `node build/src/start.js --receiveAddr=xxxx`
