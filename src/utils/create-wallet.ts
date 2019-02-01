@@ -4,7 +4,7 @@ import BITBOXSDK from 'bitbox-sdk/lib/bitbox-sdk'
 const bitbox = new BITBOXSDK({ restURL: "https://trest.bitcoin.com/v1/" })
 const lang = "english"
 
-export function generateSingleWallet(countSeedAddress = 10) {
+export function generateSingleWallet(/* countSeedAddress = 1 */) {
   // create 256 bit BIP39 mnemonic
   const mnemonic = bitbox.Mnemonic.generate(
     256,
@@ -19,17 +19,22 @@ export function generateSingleWallet(countSeedAddress = 10) {
   
   // HDNode of BIP44 account
   // Generate the first 10 seed addresses.
-  const addresses = Array.from({length: countSeedAddress}, (_, idx) => {
-    const childNode = masterHDNode.derivePath(`m/44'/145'/0'/0/${idx}`)
+  // const addresses = Array.from({length: countSeedAddress}, (_, idx) => {
+  //   const childNode = masterHDNode.derivePath(`m/44'/145'/0'/0/${idx}`)
 
-    const cashAddress = bitbox.HDNode.toCashAddress(childNode)
-    const legacyAddress = bitbox.HDNode.toLegacyAddress(childNode)
+  //   const cashAddress = bitbox.HDNode.toCashAddress(childNode)
+  //   const legacyAddress = bitbox.HDNode.toLegacyAddress(childNode)
 
-    return { cashAddress, legacyAddress }
-  })
+  //   return { cashAddress, legacyAddress }
+  // })
+
+  /* Generate the first seed address. */
+  const childNode = masterHDNode.derivePath(`m/44'/145'/0'/0/0`)
+  const cashAddress = bitbox.HDNode.toCashAddress(childNode)
+  const legacyAddress = bitbox.HDNode.toLegacyAddress(childNode)
 
   return {
-    mnemonic, addresses
+    mnemonic, cashAddress, legacyAddress
   }
 }
 
