@@ -1,5 +1,5 @@
-[![TypeScript version][ts-badge]][typescript-32]
-[![Node.js version][nodejs-badge]][nodejs]
+![TypeScript](https://img.shields.io/badge/-typescript@v32-brightgreen)
+![Node.js](https://img.shields.io/badge/-nodejs-blue)
 
 # BCH Transaction generator
 
